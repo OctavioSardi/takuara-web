@@ -1,0 +1,23 @@
+.navegacion {
+  background: transparent;
+}
+.navegacion a {
+  color: #282828;
+}
+
+.navegacion a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: black;
+}
+
+.iso {
+  height: 100%;
+  width: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #fff;
+  }
+}

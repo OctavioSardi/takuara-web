@@ -1,7 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { ParticlesConfig } from './particles';
 
-declare let particlesJS: any; // Required to be properly interpreted by TypeScript.
+declare var particlesJS: any;
 
 @Component({
   selector: 'app-home',
@@ -11,12 +10,9 @@ declare let particlesJS: any; // Required to be properly interpreted by TypeScri
 export class HomeComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {
-    this.invokeParticles();
-  }
-
-  public invokeParticles(): void {
-    particlesJS('particles-js', ParticlesConfig, function () {});
+  public ngOnInit(): void {
+    particlesJS.load('particles-js', '../../../assets/particlesjs-config.json');
+    console.log('Loading...');
   }
 
   @HostListener('document:mousemove', ['$event'])

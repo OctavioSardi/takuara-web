@@ -12,7 +12,6 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { ParticlesConfig } from './components/home/particles';
 
 @NgModule({
   imports: [

@@ -4,8 +4,15 @@
   box-sizing: border-box;
 }
 
+#particles-js {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(#ffffff);
+}
+
 .contenedor {
-  background: #dfdfff;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -14,7 +21,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  z-index: 1;
 }
 
 .contenedor img {
@@ -26,11 +32,20 @@
   object-fit: contain;
 }
 
+.contenedor img.logo {
+  height: 100%;
+  width: 70%;
+  display: block;
+  margin: auto;
+  top: auto;
+  left: auto;
+}
+
 .contenedor h2 {
   text-align: center;
   z-index: 1;
   position: relative;
-  color: #222222;
+  color: black;
   font-size: 90px;
   text-transform: uppercase;
   font-weight: 900;
@@ -42,11 +57,6 @@
   font-size: 48px;
   font-weight: 480;
   letter-spacing: 10px;
-}
-
-#particles-js {
-  width: 100%;
-  height: 100%;
 }
 
 @media (max-width: 800px) {
