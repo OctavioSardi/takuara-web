@@ -1,0 +1,13 @@
+.container .page {
+  margin-top: 18%;
+  margin-bottom: 2%;
+}
+
+.container .section {
+  padding: 2%;
+}
+
+.validacion {
+  font-style: italic;
+  color: grey;
+}

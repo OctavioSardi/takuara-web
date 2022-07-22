@@ -30,6 +30,7 @@
   top: 0;
   left: 0;
   object-fit: contain;
+  z-index: 99;
 }
 
 .contenedor img.logo {
@@ -39,6 +40,7 @@
   margin: auto;
   top: auto;
   left: auto;
+  z-index: 999;
 }
 
 .contenedor h2 {
@@ -53,30 +55,16 @@
   line-height: 60px;
 }
 
-.contenedor h2 span {
-  font-size: 48px;
-  font-weight: 480;
-  letter-spacing: 10px;
-}
-
-@media (max-width: 800px) {
-  .contenedor h2 {
-    font-size: 60px;
-    letter-spacing: 19px;
-    line-height: 35px;
-  }
-  .contenedor h2 span {
-    font-size: 26px;
+@media (max-width: 872px) {
+  .contenedor img.logo {
+    height: 110%;
+    width: 100%;
   }
 }
 
-@media (max-width: 380px) {
-  .contenedor h2 {
-    font-size: 30px;
-    letter-spacing: 9px;
-    line-height: 15px;
-  }
-  .contenedor h2 span {
-    font-size: 14px;
+@media (max-width: 500px) {
+  .contenedor img.logo {
+    height: 120%;
+    width: 150%;
   }
 }

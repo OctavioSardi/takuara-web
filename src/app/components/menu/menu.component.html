@@ -1,8 +1,12 @@
 <nav
-  class="navbar .navbar-header navbar-light navbar-expand-md navegacion"
+  class="navbar navbar-header navbar-light navbar-expand-md navegacion"
   id="navbar"
 >
-  <a class="navbar-brand" routerLink="/home">
+  <a
+    class="navbar-brand"
+    routerLink="/home"
+    (click)="navbarOpen == true && toggleNavbar()"
+  >
     <img src="assets/images/logo-negro.png" class="iso" />
   </a>
   <button
@@ -23,23 +27,41 @@
     [ngClass]="{ show: navbarOpen }"
   >
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/motivos" title="Nuestra Misión"
+      <li class="nav-item item1">
+        <a
+          class="nav-link"
+          routerLink="/motivos"
+          title="Nuestra Misión"
+          (click)="toggleNavbar()"
           >Nuestra Misión</a
         >
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/servicios" title="Que Ofrecemos?"
+      <li class="nav-item item2">
+        <a
+          class="nav-link"
+          routerLink="/servicios"
+          title="Que Ofrecemos?"
+          (click)="toggleNavbar()"
           >Que Ofrecemos?</a
         >
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/portfolio" title="Nuestro Trabajo"
+      <li class="nav-item item3">
+        <a
+          class="nav-link"
+          routerLink="/portfolio"
+          title="Nuestro Trabajo"
+          (click)="toggleNavbar()"
           >Portfolio</a
         >
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/contacto" title="Contacto">Contacto</a>
+      <li class="nav-item item4">
+        <a
+          class="nav-link"
+          routerLink="/contacto"
+          title="Contacto"
+          (click)="toggleNavbar()"
+          >Contacto</a
+        >
       </li>
     </ul>
   </div>

@@ -1,23 +1,64 @@
 .navegacion {
   background: transparent;
-}
-.navegacion a {
-  color: #282828;
+  transition: 0.5s ease-in;
 }
 
-.navegacion a:hover {
-  text-decoration: underline;
-  font-weight: bold;
-  color: black;
+.navegacion a {
+  color: #000;
+}
+
+.navegacion .item1:hover {
+  background: orange;
+  transition: 275ms ease;
+}
+
+.navegacion .item2:hover {
+  background: brown;
+  transition: 275ms ease;
+}
+
+.navegacion .item3:hover {
+  background: mediumseagreen;
+  transition: 275ms ease;
+}
+
+.navegacion .item4:hover {
+  background: steelblue;
+  transition: 500ms ease;
+}
+
+.navegacion .item1 {
+  transition: 500ms ease;
+}
+
+.navegacion .item2 {
+  transition: 500ms ease;
+}
+
+.navegacion .item3 {
+  transition: 500ms ease;
+}
+
+.navegacion .item4 {
+  transition: 500ms ease;
 }
 
 .iso {
-  height: 100%;
-  width: 5%;
+  height: 40px;
+  width: 40px;
 }
 
-@media only screen and (max-width: 768px) {
+.nav-item {
+  margin: 10px !important;
+  padding: 2px 5px !important;
+}
+
+@media only screen and (max-width: 767px) {
   .navbar {
-    background-color: #fff;
+    background-color: #fff !important;
+  }
+
+  .nav-item {
+    text-align: center !important;
   }
 }

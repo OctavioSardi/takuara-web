@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 
-declare var particlesJS: any;
+// declare var particlesJS: any;
 
 @Component({
   selector: 'app-home',
@@ -11,8 +11,7 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   public ngOnInit(): void {
-    particlesJS.load('particles-js', '../../../assets/particlesjs-config.json');
-    console.log('Loading...');
+    // particlesJS.load('particles-js', '../../../assets/particlesjs-config.json');
   }
 
   @HostListener('document:mousemove', ['$event'])
@@ -27,10 +26,5 @@ export class HomeComponent implements OnInit {
 
       move.style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)';
     });
-  }
-
-  @HostListener('document:click', ['$event'])
-  documentClickEvent($event: MouseEvent) {
-    console.log('Through HostListener - Click Event Details: ', $event);
   }
 }
