@@ -16,10 +16,11 @@ export class ServiciosComponent implements OnInit {
   @HostListener('wheel', ['$event'])
   onWheelScroll(evento: WheelEvent) {
     // Scroll up
-    if (evento.deltaY > 0) {
+    var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight)  - window.innerHeight;
+    if (window.scrollY == limit && evento.deltaY > 0) {
       this.router.navigate(['/portfolio'])
     }
-    else {
+    else if (window.scrollY == 0 && evento.deltaY < 0) {
       this.router.navigate(['/motivos'])
     }
   }

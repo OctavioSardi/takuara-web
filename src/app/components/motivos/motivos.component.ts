@@ -12,7 +12,7 @@ export class MotivosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
   @HostListener('wheel', ['$event'])
   onWheelScroll(evento: WheelEvent) {
     // Scroll up
