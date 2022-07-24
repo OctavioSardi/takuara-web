@@ -1,18 +1,36 @@
 .container .page {
-  margin-top: 18%;
-  margin-bottom: 2%;
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 12vh;
 }
 
 .container .section {
-  padding: 2%;
+    padding: 2%;
 }
 
 img {
-  display: block;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    .container .page {
+        margin: 16vh 6vw;
+
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container .page {
+        margin: 14vh 4vw;
+
+    }
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contacto',
@@ -32,12 +33,20 @@ export class ContactoComponent implements OnInit {
 
   submitted = false;
 
-  constructor() {}
+  constructor(public router: Router) {}
 
   ngOnInit(): void {}
 
   Cancelar() {
     this.FormContacto.reset();
     this.submitted = false;
+  }
+
+  @HostListener('wheel', ['$event'])
+  onWheelScroll(evento: WheelEvent) {
+    // Scroll up
+    if (evento.deltaY < 0) {
+      this.router.navigate(['/portfolio'])
+    }
   }
 }

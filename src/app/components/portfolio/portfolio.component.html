@@ -1,57 +1,38 @@
-<div class="container">
-  <div class="page">
-    <div class="section sec1">
-      <h2 class="mb-3 text-center">Nuestro Trabajo</h2>
-    </div>
+<div class="container" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear" data-aos-anchor-placement="center-bottom">
+    <div class="page">
+        <div class="section sec1">
+            <h2 class="mb-3 text-center">Nuestro Trabajo</h2>
+        </div>
 
-    <!--  Se pueden hacer imagenes de flechas custom, se necesitan los iconos-->
+        <!--  Se pueden hacer imagenes de flechas custom, se necesitan los iconos-->
 
-    <div class="glider mt-5">
-      <ngx-glide
-        [perView]="3"
-        [gap]="50"
-        [showArrows]="false"
-        [showBullets]="false"
-        [type]="'carousel'"
-        [autoplay]="3000"
-        [hoverpause]="true"
-        [swipeThreshold]="80"
-        [dragThreshold]="120"
-        [draggable]="true"
-        [touchRatio]="0.5"
-        [touchAngle]="45"
-        [animationDuration]="800"
-        [rewind]="true"
-        [rewindDuration]="800"
-        [animationTimingFunc]="'ease-in'"
-        [direction]="'ltr'"
-        [breakpoints]="{ '900': { perView: 1 }, '1200': { perView: 2 } }"
-      >
-        <div>
-          <img src="../../../assets/images/1.png" alt="" />
+        <div class="glider mt-5">
+            <ngx-glide [perView]="3" [gap]="50" [showArrows]="false" [showBullets]="false" [type]="'carousel'" [autoplay]="3000" [hoverpause]="true" [swipeThreshold]="80" [dragThreshold]="120" [draggable]="true" [touchRatio]="0.5" [touchAngle]="45" [animationDuration]="800" [rewind]="true" [rewindDuration]="800" [animationTimingFunc]="'ease-in'" [direction]="'ltr'" [breakpoints]="{ '900': { perView: 1 }, '1200': { perView: 2 } }">
+                <div>
+                    <img src="../../../assets/images/1.png" alt="" />
+                </div>
+                <div>
+                    <img src="../../../assets/images/2.png" alt="" />
+                </div>
+                <div>
+                    <img src="../../../assets/images/3.png" alt="" />
+                </div>
+                <div>
+                    <img src="../../../assets/images/4.png" alt="" />
+                </div>
+                <div>
+                    <img src="../../../assets/images/5.png" alt="" />
+                </div>
+                <div>
+                    <img src="../../../assets/images/6.png" alt="" />
+                </div>
+                <div>
+                    <img src="../../../assets/images/7.png" alt="" />
+                </div>
+                <div>
+                    <img src="../../../assets/images/8.png" alt="" />
+                </div>
+            </ngx-glide>
         </div>
-        <div>
-          <img src="../../../assets/images/2.png" alt="" />
-        </div>
-        <div>
-          <img src="../../../assets/images/3.png" alt="" />
-        </div>
-        <div>
-          <img src="../../../assets/images/4.png" alt="" />
-        </div>
-        <div>
-          <img src="../../../assets/images/5.png" alt="" />
-        </div>
-        <div>
-          <img src="../../../assets/images/6.png" alt="" />
-        </div>
-        <div>
-          <img src="../../../assets/images/7.png" alt="" />
-        </div>
-        <div>
-          <img src="../../../assets/images/8.png" alt="" />
-        </div>
-      </ngx-glide>
     </div>
-  </div>
 </div>

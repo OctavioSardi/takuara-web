@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
+import * as AOS from 'aos'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'takuara-web';
+
+  ngOnInit() {
+    AOS.init()
+    window.addEventListener('load', AOS.refresh);
+  }
+
+  
 }

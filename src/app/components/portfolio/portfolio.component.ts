@@ -1,4 +1,5 @@
 import { Component, Host, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,9 +7,18 @@ import { Component, Host, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.css'],
 })
 export class PortfolioComponent implements OnInit {
-  constructor() {}
+  constructor( public router: Router) {}
 
   ngOnInit(): void {}
 
-  cantSlides: number = 3;
+  @HostListener('wheel', ['$event'])
+  onWheelScroll(evento: WheelEvent) {
+    // Scroll up
+    if (evento.deltaY > 0) {
+      this.router.navigate(['/contacto'])
+    }
+    else {
+      this.router.navigate(['/servicios'])
+    }
+  }
 }

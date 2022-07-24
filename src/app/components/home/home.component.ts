@@ -1,6 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-
-// declare var particlesJS: any;
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +7,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(public router: Router) {}
 
   public ngOnInit(): void {
     // particlesJS.load('particles-js', '../../../assets/particlesjs-config.json');
@@ -26,5 +25,13 @@ export class HomeComponent implements OnInit {
 
       move.style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)';
     });
+  }
+
+  @HostListener('wheel', ['$event'])
+  onWheelScroll(evento: WheelEvent) {
+    // Scroll up
+    if (evento.deltaY > 0) {
+      this.router.navigate(['/motivos'])
+    }
   }
 }
