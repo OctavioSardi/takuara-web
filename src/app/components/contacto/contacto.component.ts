@@ -42,11 +42,11 @@ export class ContactoComponent implements OnInit {
     this.submitted = false;
   }
 
-  @HostListener('wheel', ['$event'])
-  onWheelScroll(evento: WheelEvent) {
-    // Scroll up
-    if (evento.deltaY < 0) {
-      this.router.navigate(['/portfolio'])
-    }
-  }
+  // @HostListener('wheel', ['$event'])
+  // onWheelScroll(evento: WheelEvent) {
+  //   // Scroll up
+  //   if (evento.deltaY < 0) {
+  //     this.router.navigate(['/portfolio'])
+  //   }
+  // }
 }

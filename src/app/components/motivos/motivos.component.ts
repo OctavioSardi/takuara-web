@@ -13,14 +13,14 @@ export class MotivosComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  @HostListener('wheel', ['$event'])
-  onWheelScroll(evento: WheelEvent) {
-    // Scroll up
-    if (evento.deltaY > 0) {
-      this.router.navigate(['/servicios'])
-    }
-    else {
-      this.router.navigate(['/home'])
-    }
-  }
+  // @HostListener('wheel', ['$event'])
+  // onWheelScroll(evento: WheelEvent) {
+  //   // Scroll up
+  //   if (evento.deltaY > 0) {
+  //     this.router.navigate(['/servicios'])
+  //   }
+  //   else {
+  //     this.router.navigate(['/home'])
+  //   }
+  // }
 }

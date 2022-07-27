@@ -13,8 +13,6 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { NgxGlideComponent, NgxGlideModule } from 'ngx-glide';
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 @NgModule({
   imports: [
@@ -23,19 +21,18 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgxPageScrollCoreModule,
-    NgxPageScrollModule,
 
     //Ref Angular Routing
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
-      { path: 'home', component: HomeComponent },
-      { path: 'motivos', component: MotivosComponent },
+      { path: 'home', component: HomeComponent},
+      { path: 'motivos' ,component: MotivosComponent },
       { path: 'servicios', component: ServiciosComponent },
       { path: 'portfolio', component: PortfolioComponent },
       { path: 'contacto', component: ContactoComponent },
       { path: '**', redirectTo: '/home', pathMatch: 'full' },
     ]),
+
   ],
   declarations: [
     AppComponent,

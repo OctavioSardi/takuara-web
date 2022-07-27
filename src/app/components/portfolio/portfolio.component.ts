@@ -11,14 +11,14 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  @HostListener('wheel', ['$event'])
-  onWheelScroll(evento: WheelEvent) {
-    // Scroll up
-    if (evento.deltaY > 0) {
-      this.router.navigate(['/contacto'])
-    }
-    else {
-      this.router.navigate(['/servicios'])
-    }
-  }
+//   @HostListener('wheel', ['$event'])
+//   onWheelScroll(evento: WheelEvent) {
+//     // Scroll up
+//     if (evento.deltaY > 0) {
+//       this.router.navigate(['/contacto'])
+//     }
+//     else {
+//       this.router.navigate(['/servicios'])
+//     }
+//   }
 }

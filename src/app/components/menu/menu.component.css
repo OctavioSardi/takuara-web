@@ -54,11 +54,12 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .navbar {
+    #navbar {
         background-color: #d6b785 !important;
     }
 
     .nav-item {
         text-align: center !important;
     }
+
 }

@@ -27,11 +27,5 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  @HostListener('wheel', ['$event'])
-  onWheelScroll(evento: WheelEvent) {
-    // Scroll up
-    if (evento.deltaY > 0) {
-      this.router.navigate(['/motivos'])
-    }
-  }
+  
 }

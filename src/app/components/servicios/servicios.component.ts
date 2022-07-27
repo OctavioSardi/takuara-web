@@ -13,15 +13,15 @@ export class ServiciosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @HostListener('wheel', ['$event'])
-  onWheelScroll(evento: WheelEvent) {
-    // Scroll up
-    var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight)  - window.innerHeight;
-    if (window.scrollY == limit && evento.deltaY > 0) {
-      this.router.navigate(['/portfolio'])
-    }
-    else if (window.scrollY == 0 && evento.deltaY < 0) {
-      this.router.navigate(['/motivos'])
-    }
-  }
+  // @HostListener('wheel', ['$event'])
+  // onWheelScroll(evento: WheelEvent) {
+  //   // Scroll up
+  //   var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight)  - window.innerHeight;
+  //   if (window.scrollY == limit && evento.deltaY > 0) {
+  //     this.router.navigate(['/portfolio'])
+  //   }
+  //   else if (window.scrollY == 0 && evento.deltaY < 0) {
+  //     this.router.navigate(['/motivos'])
+  //   }
+  // }
 }

@@ -7,8 +7,19 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   navbarOpen: boolean = false;
+
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
+  }
+
+  scrollTo(anchorTag: string) {
+      let titleView = document.getElementById(anchorTag) as HTMLElement;
+      titleView.scrollIntoView();
+      this.toggleNavbar()
+    }
+
+  scrollToTop() {
+    window.scroll(0,0)
   }
 
   constructor() {}
@@ -25,4 +36,6 @@ export class MenuComponent implements OnInit {
       barra.style.background = '#d6b785';
     }
   }
+
+  
 }
