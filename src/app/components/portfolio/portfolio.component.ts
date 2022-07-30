@@ -7,18 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./portfolio.component.css'],
 })
 export class PortfolioComponent implements OnInit {
-  constructor( public router: Router) {}
+  constructor(public router: Router) {}
 
   ngOnInit(): void {}
-
-//   @HostListener('wheel', ['$event'])
-//   onWheelScroll(evento: WheelEvent) {
-//     // Scroll up
-//     if (evento.deltaY > 0) {
-//       this.router.navigate(['/contacto'])
-//     }
-//     else {
-//       this.router.navigate(['/servicios'])
-//     }
-//   }
 }

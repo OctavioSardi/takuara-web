@@ -1,38 +1,22 @@
 .container .page {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    /* overflow: visible; */
-    padding-top: 8rem;
-    margin-bottom: 8rem;
-    scroll-padding-top: 10rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* overflow: visible; */
+  padding-top: 8rem;
+  margin-bottom: 8rem;
+  z-index: 1;
 }
 
-/* .container .section {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-} */
-
-.validacion {
-    font-style: italic;
-    color: grey;
+validacion {
+  font-style: italic;
+  color: grey;
 }
 
-@media only screen and (max-width: 768px) {
-    .container .page {
-        /* padding: 15vh 6vw; */
-        height: 100%;
-
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .container .page {
-        /* padding: 14vh 4vw; */
-        height: 100%;
-
-    }
+@media (max-width: 768px) {
+  .container .page {
+    height: 100%;
+    padding-bottom: 4rem;
+  }
 }

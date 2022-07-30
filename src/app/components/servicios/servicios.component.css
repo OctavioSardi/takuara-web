@@ -1,31 +1,22 @@
 .container .page {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    /* overflow: visible; */
-    padding-top: 8rem;
-    scroll-padding-top: 10rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 1;
 }
 
 .container .section {
-    text-align: center;
-    /* top: 0;
+  text-align: center;
+  /* top: 0;
     bottom: 0;
     left: 0;
     right: 0; */
 }
 
-@media only screen and (max-width: 768px) {
-    .container .page {
-        height: 100%;
-
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .container .page {
-        height: 100%;
-
-    }
+@media (max-width: 768px) {
+  .container .page {
+    padding-top: 2rem;
+    height: 100%;
+  }
 }
