@@ -5,16 +5,18 @@
 }
 
 .home {
-  padding: 5vh 0;
+  /* padding: 5vh 0 0 0; */
   text-align: center;
 }
 
 .frase {
-  background-color: #f6c15e;
+  background-color: rgb(251, 184, 70);
   /* border-radius: 12px; */
+  height: 100%;
   width: 100%;
   justify-content: center;
   padding: 2vh;
+  padding-bottom: 5vh;
   display: inline-block;
 }
 
@@ -109,7 +111,7 @@
 
 @media (max-width: 425px) {
   .contenedor {
-    height: 40vh;
+    height: 50vh;
     margin-top: 5vh;
   }
   .contenedor img.logo {
@@ -118,5 +120,9 @@
   }
   .frase h4 {
     font-size: 1.3rem;
+  }
+
+  .frase {
+    height: 30vh;
   }
 }

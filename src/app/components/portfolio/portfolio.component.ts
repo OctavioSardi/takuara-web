@@ -1,5 +1,6 @@
 import { Component, Host, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DisplayFetchService } from 'src/app/services/display-fetch.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,7 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./portfolio.component.css'],
 })
 export class PortfolioComponent implements OnInit {
-  constructor(public router: Router) {}
+  constructor(public router: Router, private display: DisplayFetchService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.display.performGetEx());
+  }
 }

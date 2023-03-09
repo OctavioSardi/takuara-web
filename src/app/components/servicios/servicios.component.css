@@ -44,7 +44,7 @@
 .yellow h4 {
   /* border: 5px solid #f6c15e; */
   text-decoration: underline;
-  text-decoration-color: #f6c15e;
+  text-decoration-color: rgb(251, 184, 70);
 }
 
 .button_slide .blue {
@@ -56,7 +56,7 @@
 }
 
 .button_slide .yellow {
-  box-shadow: inset 0 0 0 0 #f6c15e;
+  box-shadow: inset 0 0 0 0 rgb(251, 184, 70);
 }
 
 .button_slide {
@@ -89,7 +89,7 @@ button_slide h4 {
 }
 
 .yellow:hover {
-  box-shadow: inset 0 35vh 0 0 #f6c15e;
+  box-shadow: inset 0 35vh 0 0 rgb(251, 184, 70);
 }
 
 .slide_down:hover h4 {
@@ -116,6 +116,7 @@ button_slide h4 {
   display: none;
   margin-bottom: 5px;
   font-size: 0.95rem;
+  font-weight: 600;
 }
 
 /* #outer {
@@ -150,7 +151,7 @@ button_slide h4 {
   }
 
   .hide {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -165,7 +166,7 @@ button_slide h4 {
   }
 
   .hide {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -180,6 +181,6 @@ button_slide h4 {
   }
 
   .hide {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
