@@ -1,0 +1,209 @@
+<!-- <div class="container" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-enter"> -->
+<div class="container">
+  <div class="page">
+    <div class="section sec1">
+      <h2 id="sec4" class="text-center">Contactános</h2>
+      <form name="FormBusqueda" [formGroup]="FormContacto">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 col-sm-12 offset-md-2">
+              <label class="col-form-label" for="NomAp"
+                >Nombre y Apellido:</label
+              >
+              <input
+                type="text"
+                name="NomAp"
+                class="form-control"
+                formControlName="NomAp"
+                [ngClass]="{
+                  'is-invalid':
+                    (FormContacto.controls['NomAp'].touched || submitted) &&
+                    FormContacto.controls['NomAp'].errors
+                }"
+                maxlength="55"
+              />
+
+              <div
+                class="validacion"
+                *ngIf="
+                  (FormContacto.controls['NomAp'].touched || submitted) &&
+                  FormContacto.controls['NomAp'].hasError('required')
+                "
+              >
+                Dato requerido.
+              </div>
+              <div
+                class="validacion"
+                *ngIf="
+                  (FormContacto.controls['NomAp'].touched || submitted) &&
+                  (FormContacto.controls['NomAp'].hasError('minlength') ||
+                    FormContacto.controls['NomAp'].hasError('maxlength'))
+                "
+              >
+                Solo debe contener texto, de 4 a 55 caracteres.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8 col-sm-12 offset-md-2">
+              <label class="col-form-label">Empresa:</label>
+              <input
+                type="text"
+                name="Empresa"
+                class="form-control"
+                formControlName="Empresa"
+                [ngClass]="{
+                  'is-invalid':
+                    (FormContacto.controls['Empresa'].touched || submitted) &&
+                    FormContacto.controls['Empresa'].errors
+                }"
+                maxlength="55"
+              />
+
+              <div
+                class="validacion"
+                *ngIf="
+                  (FormContacto.controls['Empresa'].touched || submitted) &&
+                  FormContacto.controls['Empresa'].hasError('required')
+                "
+              >
+                Dato requerido.
+              </div>
+              <div
+                class="validacion"
+                *ngIf="
+                  (FormContacto.controls['Empresa'].touched || submitted) &&
+                  (FormContacto.controls['Empresa'].hasError('minlength') ||
+                    FormContacto.controls['Empresa'].hasError('maxlength'))
+                "
+              >
+                Solo debe contener texto, de 4 a 55 caracteres.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8 col-sm-12 offset-md-2">
+              <label class="col-form-label" for="Mail">Email:</label>
+              <input
+                type="email"
+                name="Mail"
+                id="Mail"
+                class="form-control"
+                formControlName="Mail"
+                [ngClass]="{
+                  'is-invalid':
+                    (FormContacto.controls['Mail'].touched || submitted) &&
+                    FormContacto.controls['Mail'].errors
+                }"
+                maxlength="100"
+              />
+
+              <div
+                class="validacion"
+                *ngIf="
+                  (FormContacto.controls['Mail'].touched || submitted) &&
+                  FormContacto.controls['Mail'].hasError('required')
+                "
+              >
+                Dato requerido.
+              </div>
+              <div
+                class="validacion"
+                *ngIf="
+                  (FormContacto.controls['Mail'].touched || submitted) &&
+                  (FormContacto.controls['Mail'].hasError('minlength') ||
+                    FormContacto.controls['Mail'].hasError('maxlength') ||
+                    FormContacto.controls['Mail'].hasError('pattern'))
+                "
+              >
+                Formato incorrecto, de 4 a 100 caracteres.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-sm-12 offset-md-2">
+              <label class="col-form-label" for="Movil">Teléfono Móvil:</label>
+              <input
+                type="text"
+                name="Movil"
+                class="form-control"
+                formControlName="Movil"
+                [ngClass]="{
+                  'is-invalid':
+                    (FormContacto.controls['Movil'].touched || submitted) &&
+                    FormContacto.controls['Movil'].errors
+                }"
+                maxlength="100"
+              />
+
+              <div
+                class="validacion"
+                *ngIf="
+                  (FormContacto.controls['Movil'].touched || submitted) &&
+                  FormContacto.controls['Movil'].hasError('required')
+                "
+              >
+                Dato requerido.
+              </div>
+              <div
+                class="validacion"
+                *ngIf="
+                  (FormContacto.controls['Movil'].touched || submitted) &&
+                  FormContacto.controls['Movil'].hasError('pattern')
+                "
+              >
+                Solo debe contener de 6 a 20 dígitos.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-sm-12 offset-md-2">
+              <label class="col-form-label" for="NomAp">Mensaje:</label>
+              <textarea
+                name="NomAp"
+                class="form-control"
+                formControlName="Msg"
+                [ngClass]="{
+                  'is-invalid':
+                    (FormContacto.controls['Msg'].touched || submitted) &&
+                    FormContacto.controls['Msg'].errors
+                }"
+                maxlength="300"
+                rows="4"
+                cols="50"
+              ></textarea>
+
+              <div
+                class="validacion"
+                *ngIf="
+                  (FormContacto.controls['Msg'].touched || submitted) &&
+                  (FormContacto.controls['Msg'].hasError('minlength') ||
+                    FormContacto.controls['Msg'].hasError('maxlength'))
+                "
+              >
+                Solo debe contener texto, maximo 300 caracteres.
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center botones mt-5">
+            <button id="btn-enviar" type="submit" class="btn btn-primary">
+              Enviar
+            </button>
+            &nbsp;
+            <button
+              id="btn-cancelar"
+              type="button"
+              class="btn btn-warning"
+              (click)="Cancelar()"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

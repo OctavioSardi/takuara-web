@@ -1,0 +1,36 @@
+.container .page {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  /* overflow: visible; */
+  padding-top: 8rem;
+  margin-bottom: 8rem;
+  z-index: 0;
+}
+
+validacion {
+  font-style: italic;
+  color: grey;
+}
+
+#btn-enviar {
+  background-color: rgb(24, 117, 179);
+  border-color: rgb(24, 117, 179);
+  color: white;
+  border-radius: 0%;
+}
+
+#btn-cancelar {
+  background-color: rgb(206, 70, 52);
+  border-color: rgb(206, 70, 52);
+  color: white;
+  border-radius: 0%;
+}
+
+@media (max-width: 768px) {
+  .container .page {
+    height: 100%;
+    padding-bottom: 4rem;
+  }
+}

@@ -1,0 +1,48 @@
+<nav
+  class="navbar navbar-header navbar-light navbar-expand-md navegacion"
+  id="navbar"
+>
+  <a class="navbar-brand" (click)="(navbarOpen == true); scrollToTop()">
+    <img src="assets/images/logo-negro.png" class="iso" />
+  </a>
+  <button
+    class="navbar-toggler text-right"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    (click)="toggleNavbar()"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    class="collapse navbar-collapse"
+    id="navbarSupportedContent"
+    [ngClass]="{ show: navbarOpen }"
+  >
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item item1">
+        <a class="nav-link" title="Por Qué Nosotros?" (click)="scrollTo('sec1')"
+          >Por Qué Nosotros?</a
+        >
+      </li>
+      <li class="nav-item item2">
+        <a class="nav-link" title="Que Ofrecemos?" (click)="scrollTo('sec2')"
+          >Que Ofrecemos?</a
+        >
+      </li>
+      <li class="nav-item item3">
+        <a class="nav-link" title="Nuestro Trabajo" (click)="scrollTo('sec3')"
+          >Portfolio</a
+        >
+      </li>
+      <li class="nav-item item4">
+        <a class="nav-link" title="Contacto" (click)="scrollTo('sec4')"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
