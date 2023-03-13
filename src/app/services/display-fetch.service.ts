@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DisplayFetchService {
-  private url = 'src/assets/imgArray.php';
+  private url = 'https://takuara.com.ar/backend/imgArray.php';
   constructor(private http: HttpClient) {}
 
   performGetEx(): Observable<any> {
-    return this.http.get<any>(this.url);
+    return this.http.get(this.url);
   }
 }

@@ -1,7 +1,7 @@
 <!-- <div class="container" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear"> -->
 <div class="container">
   <div class="page">
-    <div class="section sec1">
+    <div class="section sec1" *ngIf="pageLoaded">
       <h2 id="sec3" class="mb-3 text-center">5 Años Comunicando Diferente!</h2>
 
       <!--  Se pueden hacer imagenes de flechas custom, se necesitan los iconos-->
@@ -27,145 +27,12 @@
           [direction]="'ltr'"
           [breakpoints]="{ '768': { perView: 1 }, '1200': { perView: 2 } }"
         >
-          <div>
+          <!-- Carrusel Posta -->
+          <div *ngFor="let file of imageFileNames">
             <img
-              src="../../../assets/images/Display/Almacen-con-mesas.png"
-              alt="Alamcen con Mesas"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/banner-irac.png"
-              alt="IRAC"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Bricks-mundial.png"
-              alt="Bricks Mundial"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Bricks-RRSS.png"
-              alt="Bricks RRSS"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/cartel-bimer-lauro.png"
-              alt="Cartel Bimer"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Chucks-carta.png"
-              alt="Carta Chucks"
-            />
-          </div>
-          <div>
-            <img src="../../../assets/images/Display/Chucks.png" alt="Chucks" />
-          </div>
-          <div>
-            <img src="../../../assets/images/Display/Dali 2.png" alt="Dali 2" />
-          </div>
-          <div>
-            <img src="../../../assets/images/Display/Dali.png" alt="Dali 1" />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Delirico-2.png"
-              alt="Delirico 1"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Delirico.png"
-              alt="Delirico 2"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Delírico.png"
-              alt="Delirico 3"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/El-pungo.png"
-              alt="El Pungo"
-            />
-          </div>
-          <div>
-            <img src="../../../assets/images/Display/Embat.png" alt="Embat" />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Euforia.png"
-              alt="Euforia"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Farmacia-Zaya.png"
-              alt="Farmacia Zaya"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Festival-de-Doma-y-Folklore.png"
-              alt="Festival Doma y Folklore 1"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Festival.png"
-              alt="Festival Doma y Folklore 2"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Full-Move.png"
-              alt="Full Move"
-            />
-          </div>
-          <div>
-            <img src="../../../assets/images/Display/Irac.png" alt="IRAC 2" />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Las-3-hermanas.png"
-              alt="Las 3 Hermanas"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/MD,-espacio-de-arquitectos.png"
-              alt="MD Arquitectos"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Oye-Radio.png"
-              alt="Oye Radio"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/PanDeVida.png"
-              alt="Pan de Vida"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/papelería-borgnino.png"
-              alt="Papeleria Borgnino"
-            />
-          </div>
-          <div>
-            <img
-              src="../../../assets/images/Display/Rolfo-Paredes-Coll.png"
-              alt="Rolfo Paredes Coll"
+              src="{{ file.field }}"
+              alt=""
+              (error)="handleImageError($event)"
             />
           </div>
         </ngx-glide>
