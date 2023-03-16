@@ -1,10 +1,10 @@
 <!-- <div class="container" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear"> -->
-<div class="container">
+<!-- <div class="container">
   <div class="page">
-    <div class="section sec1" *ngIf="pageLoaded">
+    <div class="section sec1">
       <h2 id="sec3" class="mb-3 text-center">5 Años Comunicando Diferente!</h2>
 
-      <!--  Se pueden hacer imagenes de flechas custom, se necesitan los iconos-->
+      <app-glide></app-glide>
 
       <div class="glider mt-5">
         <ngx-glide
@@ -26,17 +26,17 @@
           [animationTimingFunc]="'ease-out'"
           [direction]="'ltr'"
           [breakpoints]="{ '768': { perView: 1 }, '1200': { perView: 2 } }"
+          #ngxGlide
         >
-          <!-- Carrusel Posta -->
-          <div *ngFor="let file of imageFileNames">
+          <ng-container *ngFor="let file of imageFileNames">
             <img
               src="{{ file.field }}"
               alt=""
               (error)="handleImageError($event)"
             />
-          </div>
+          </ng-container>
         </ngx-glide>
       </div>
     </div>
   </div>
-</div>
+</div> -->

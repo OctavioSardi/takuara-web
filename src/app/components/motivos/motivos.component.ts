@@ -4,18 +4,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-motivos',
   templateUrl: './motivos.component.html',
-  styleUrls: ['./motivos.component.css']
+  styleUrls: ['./motivos.component.css'],
 })
 export class MotivosComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-  
   // @HostListener('wheel', ['$event'])
   // onWheelScroll(evento: WheelEvent) {
-  //   // Scroll up
+  // Scroll up
   //   if (evento.deltaY > 0) {
   //     this.router.navigate(['/servicios'])
   //   }

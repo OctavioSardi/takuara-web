@@ -1,10 +1,60 @@
+.header {
+  height: 18vh;
+  background-image: linear-gradient(to right bottom, #fbb846, #fbb846);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin-top: -1px;
+  clip-path: polygon(0 0, 100% 0, 100% 10vh, 0 100%);
+  padding-bottom: 3vh;
+  margin-bottom: 3vh;
+}
+
+.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* top: 50%; */
+  /* left: 0%;
+  transform: translate(-50%, -50%);
+  text-align: center; */
+}
+
+.heading-primary {
+  margin-right: auto;
+  color: #fff;
+  backface-visibility: hidden;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.app-motivos {
+  /* background: radial-gradient(
+    circle,
+    rgba(251, 184, 70, 1) 0%,
+    rgba(255, 255, 255, 1) 40%
+  ); */
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+}
+
+.container {
+  margin-bottom: -1px;
+}
+
 .container .page {
   position: relative;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  padding-bottom: 5vh;
+  /* height: 80vh;; */
+  height: 100%;
+  width: 100%;
+  /* background-color: rgb(251, 184, 70); */
   z-index: 0;
-  padding-top: 8rem;
 }
 
 .container .section {
@@ -15,20 +65,100 @@
     right: 0; */
 }
 
+.top-half {
+  height: 50%;
+  text-align: center;
+}
+
+.bottom-half {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.ndea {
+  position: relative;
+}
+
 .group {
   display: block;
+  margin-bottom: 3vh;
+  padding: 1vh;
+  border: solid #fff 4px;
+  max-height: 60vh;
+  height: 40vh;
+  text-align: center;
+  background-color: #eae8e2;
 }
 
 .group .img {
-  max-height: 10vh;
+  width: 30%;
+  max-height: 9.8vh;
+  position: absolute; /* Set the child element to absolute */
+  top: 50%; /* Set the top position to 50% */
+  left: 50%; /* Set the left position to 50% */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Use the translate() function to center the element */
+  max-width: 100%; /* Set the maximum width of the image to 100% to make it responsive */
+  max-height: 100%; /* Set the maximum height of the image to 100% to make it responsive */
+}
+
+img {
+  vertical-align: middle;
 }
 
 .group .texto {
-  font-size: 1.3rem;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.group:hover {
+  /* border-color: rgb(251, 184, 70); */
+  color: black;
+  transition: ease-in 120ms;
+}
+
+@media (max-width: 1400px) {
+  .group .texto {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container .page {
+    height: 100%;
+  }
+
+  .group .img {
+    width: 25%;
+  }
+
+  .group {
+    height: 34vh;
+  }
 }
 
 @media (max-width: 768px) {
   .container .page {
     height: 100%;
+  }
+
+  .group {
+    height: 36vh;
+  }
+
+  .group .img {
+    width: 20%;
+  }
+
+  .group .texto {
+    font-size: 0.95rem;
+  }
+
+  .header {
+    height: 20vh;
+    clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
   }
 }

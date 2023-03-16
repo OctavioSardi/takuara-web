@@ -1,0 +1,93 @@
+.header {
+  height: 18vh;
+  background-image: linear-gradient(to right bottom, #ce4735, #ce4735);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin-top: -1px;
+  clip-path: polygon(0 0, 100% 0, 100% 10vh, 0 100%);
+  padding-bottom: 3vh;
+  margin-bottom: 3vh;
+}
+
+.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* top: 50%; */
+  /* left: 0%;
+  transform: translate(-50%, -50%);
+  text-align: center; */
+}
+
+.heading-primary {
+  margin-right: auto;
+  color: #fff;
+  backface-visibility: hidden;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.app-glide {
+  /* background: radial-gradient(
+    circle,
+    rgba(251, 184, 70, 1) 0%,
+    rgba(255, 255, 255, 1) 40%
+  ); */
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+}
+
+.container .page {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  /* height: 50vh; */
+  height: 100%;
+  /* padding-top: 8rem; */
+  z-index: 0;
+  margin-bottom: 3vh;
+}
+
+.carrusel {
+  height: 90%;
+}
+
+.foto {
+  height: 100%;
+}
+/* .container .section {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} */
+
+img {
+  display: block;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 768px) {
+  .container .page {
+    padding-top: 2rem;
+    height: 100%;
+  }
+
+  .header {
+    height: 20vh;
+    clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
+  }
+  /* 
+  .container .foto {
+    width: 90vw;
+  } */
+}

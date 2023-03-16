@@ -14,6 +14,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { NgxGlideComponent, NgxGlideModule } from 'ngx-glide';
 import { WpButtonComponent } from './components/wp-button/wp-button.component';
+import { GlideComponent } from './components/glide/glide.component';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { WpButtonComponent } from './components/wp-button/wp-button.component';
     ContactoComponent,
     MenuComponent,
     WpButtonComponent,
+    GlideComponent,
   ],
 
   providers: [],

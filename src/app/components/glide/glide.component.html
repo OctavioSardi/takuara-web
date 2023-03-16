@@ -1,0 +1,45 @@
+<div class="app-glide">
+  <header class="header">
+    <div class="text-box" id="sec3">
+      <h2 class="heading-primary">
+        <span class="heading-primary-main">Comuniquémos diferente!</span>
+      </h2>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="page">
+      <div class="section">
+        <div
+          class="carrusel"
+          *ngIf="imageFileNames && imageFileNames.length > 0"
+        >
+          <ngx-glide
+            [perView]="3"
+            [gap]="4"
+            [showArrows]="false"
+            [showBullets]="false"
+            [type]="'carousel'"
+            [autoplay]="3000"
+            [hoverpause]="false"
+            [swipeThreshold]="10"
+            [dragThreshold]="12"
+            [touchRatio]="0.5"
+            [touchAngle]="45"
+            [animationDuration]="1000"
+            [rewind]="true"
+            [rewindDuration]="800"
+            [animationTimingFunc]="'ease-out'"
+            [direction]="'ltr'"
+            [breakpoints]="{ '768': { perView: 1 }, '1200': { perView: 2 } }"
+            #ngxGlide
+          >
+            <div class="foto" *ngFor="let file of imageFileNames">
+              <img src="{{ file.name }}" />
+            </div>
+          </ngx-glide>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
