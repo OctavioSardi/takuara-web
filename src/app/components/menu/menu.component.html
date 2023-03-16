@@ -1,4 +1,9 @@
 <nav
+  [ngClass]="{
+    'navbar-color1': activeHeading === 'Motivos para trabajar juntos',
+    'navbar-color2': activeHeading === 'Nuestros servicios',
+    'navbar-color3': activeHeading === 'Comuniquémos diferente!'
+  }"
   class="navbar navbar-header navbar-light navbar-expand-md navegacion"
   id="navbar"
 >
@@ -41,11 +46,11 @@
           >Nuestro trabajo</a
         >
       </li>
-      <li class="nav-item item4">
+      <!-- <li class="nav-item item4">
         <a class="nav-link" title="Contacto" (click)="scrollTo('sec4')"
           >Contáctanos</a
         >
-      </li>
+      </li> -->
     </ul>
   </div>
 </nav>

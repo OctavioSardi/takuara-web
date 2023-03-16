@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   constructor(public router: Router) {}
 
   public ngOnInit(): void {
-    // particlesJS.load('particles-js', '../../../assets/particlesjs-config.json');
+    this.checkScreenWidth();
   }
 
   @HostListener('document:mousemove', ['$event'])
@@ -25,5 +25,16 @@ export class HomeComponent implements OnInit {
 
       move.style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)';
     });
+  }
+
+  public isMobileScreen = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenWidth();
+  }
+
+  checkScreenWidth() {
+    this.isMobileScreen = window.innerWidth <= 1200;
   }
 }

@@ -15,17 +15,24 @@
     <img src="assets/images/5.png" class="object" data-value="8" />
     <img src="assets/images/6.png" class="object" data-value="-3" />
 
-    <!-- <h2 id="sec1">¿Por qué elegir comunicar diferente?</h2> -->
+    <div *ngIf="!isMobileScreen" class="frase">
+      <h4 class="mt-3 mb-1">
+        Porque tu <span>idea</span> puede cobrar vida de la mano de un
+        <span>equipo de profesionales</span> preparado para acompañar tu
+        <span>proyecto</span>. Con creatividad, conocimiento, herramientas y
+        estrategias, llevando tu <span>marca</span> al siguiente
+        <span>nivel</span>.
+      </h4>
+    </div>
   </div>
-  <div class="frase">
+
+  <div class="frase2" *ngIf="isMobileScreen">
     <h4 class="mt-3 mb-1">
       Porque tu <span>idea</span> puede cobrar vida de la mano de un
       <span>equipo de profesionales</span> preparado para acompañar tu
-      <span>proyecto</span>.
-    </h4>
-    <h4 class="mb-3">
-      Con creatividad, conocimiento, herramientas y estrategias, llevando tu
-      <span>marca</span> al siguiente <span>nivel</span>.
+      <span>proyecto</span>. Con creatividad, conocimiento, herramientas y
+      estrategias, llevando tu <span>marca</span> al siguiente
+      <span>nivel</span>.
     </h4>
   </div>
 </div>

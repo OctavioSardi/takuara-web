@@ -26,14 +26,45 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  @HostListener('document:scroll', ['$event'])
-  scrolling() {
-    let barra = document.getElementById('navbar') as HTMLElement;
-    if (window.scrollY == 0) {
-      barra.style.background = 'transparent';
-      barra.style.transition = '0,5s ease-in';
+  // @HostListener('document:scroll', ['$event'])
+  // scrolling() {
+  //   let barra = document.getElementById('navbar') as HTMLElement;
+  //   if (window.scrollY == 0) {
+  //     barra.style.background = 'transparent';
+  //     barra.style.transition = '0,5s ease-in';
+  //   } else {
+  //     barra.style.background = 'rgb(251, 184, 70)';
+  //   }
+  // }
+
+  activeHeading: string = '';
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any) {
+    const headings = document.querySelectorAll('.text-box');
+
+    // headings.forEach((heading, index) => {
+    //   const rect = heading.getBoundingClientRect();
+    //   if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+    //     activeIndex = index;
+    //   }
+    // });
+
+    let activeIndex = -1;
+    const viewHeight = window.innerHeight;
+    const threshold = viewHeight * 0.5;
+    headings.forEach((heading, index) => {
+      const rect = heading.getBoundingClientRect();
+      if (rect.bottom <= threshold) {
+        activeIndex = index;
+      }
+    });
+
+    if (activeIndex >= 0) {
+      this.activeHeading = headings[activeIndex].textContent!;
+      console.log(this.activeHeading);
     } else {
-      barra.style.background = 'rgb(251, 184, 70)';
+      this.activeHeading = '';
     }
   }
 }

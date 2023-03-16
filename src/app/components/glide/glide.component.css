@@ -50,6 +50,8 @@
   /* padding-top: 8rem; */
   z-index: 0;
   margin-bottom: 3vh;
+  padding-top: 8;
+  padding-bottom: 15vh;
 }
 
 .carrusel {

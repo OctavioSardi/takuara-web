@@ -1,36 +1,37 @@
 .navegacion {
-  background: transparent;
+  background: #eae8e2;
   transition: 0.5s ease-in;
+  font-weight: bold;
 }
 
 .navegacion a {
-  color: rgb(63, 63, 63);
+  color: #000;
   cursor: pointer;
 }
 
 .navegacion .item1:hover {
-  background: rgb(24, 117, 179);
+  background: #fbb846;
+  color: #fff;
   transition: 250ms ease;
-  font-weight: bold;
 }
 
 .navegacion .item2:hover {
-  background: rgb(206, 70, 52);
+  background: #1d75ac;
+  color: #fff;
   transition: 250ms ease;
-  font-weight: bold;
 }
 
 .navegacion .item3:hover {
-  background: rgb(24, 117, 179);
+  background: #ce4735;
+  color: #fff;
   transition: 250ms ease;
-  font-weight: bold;
 }
 
-.navegacion .item4:hover {
+/* .navegacion .item4:hover {
   background: rgb(206, 70, 52);
   transition: 250ms ease;
   font-weight: bold;
-}
+} */
 
 .navegacion .item1 {
   transition: 250ms ease;
@@ -58,11 +59,22 @@
   padding: 2px 5px !important;
 }
 
-@media only screen and (max-width: 767px) {
-  #navbar {
-    background-color: rgb(251, 184, 70) !important;
-  }
+.navbar-color1 {
+  background-color: #fbb846;
+  transition: 0.5s ease-in;
+}
 
+.navbar-color2 {
+  background-color: #1d75ac;
+  transition: 0.5s ease-in;
+}
+
+.navbar-color3 {
+  background-color: #ce4735;
+  transition: 0.5s ease-in;
+}
+
+@media only screen and (max-width: 767px) {
   .nav-item {
     text-align: center !important;
   }
